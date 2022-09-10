@@ -16,7 +16,7 @@ public class FetchNextNumberController {
     @Autowired
     FetchNextNumberService fetchNextNumberServiceImpl;
 
-    @GetMapping("")
+    @PostMapping("")
     public ResponseEntity<Object> fetchNextNumber(@RequestBody FetchNextNumberInput fetchNextNumberInput) {
         List<Integer> valueList = fetchNextNumberServiceImpl.fetchNextNumber(fetchNextNumberInput.getCategoryCode());
         FetchNextNumberResponse fetchNextNumberResponse = FetchNextNumberResponse.builder()

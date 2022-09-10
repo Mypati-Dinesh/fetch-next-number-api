@@ -17,17 +17,7 @@ public class FetchNextNumberServiceImpl implements FetchNextNumberService {
     @Override
     public List<Integer> fetchNextNumber(String categoryCode) {
         Integer oldValue = fetchNextNumberRepositoryImpl.fetchValueByCategoryCode(categoryCode);
-        String oldValueString = Integer.toString(oldValue);
-        int newValue = 0;
-        int sum =0;
-        for(int i=0; i<=oldValueString.length()-1; i++){
-            sum = sum + oldValueString.charAt(i);
-        }
-        if(sum == 1) {
-            newValue = oldValue + 9;
-        } else {
-            
-        }
+        Integer newValue = oldValue+9;
         fetchNextNumberRepositoryImpl.saveValueByCategoryCode(categoryCode, newValue);
         List<Integer> valueList = new ArrayList<>();
         valueList.add(oldValue);

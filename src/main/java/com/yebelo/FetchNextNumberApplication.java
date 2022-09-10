@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FetchNextNumberApiApplication {
+public class FetchNextNumberApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FetchNextNumberApiApplication.class, args);
+		SpringApplication.run(FetchNextNumberApplication.class, args);
 	}
 
 }
